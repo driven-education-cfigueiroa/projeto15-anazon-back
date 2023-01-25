@@ -11,6 +11,15 @@ app.get('/api/products', (_req, res) => {
   res.send(data.products);
 });
 
+app.get('/api/products/slug/:slug', (req, res) => {
+  const product = data.products.find(product => product.slug === req.params.slug);
+  if (product) {
+    res.send(product);
+  } else {
+    res.status(404).send({ message: 'Produto não encontrado' });
+  }
+});
+
 app.listen(port, () => {
   console.log(`Running at http://${ip}:${port}`);
 });
