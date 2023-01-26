@@ -7,7 +7,7 @@ export const data = {
       category: 'Casacos',
       image: '/images/p1.png',
       price: 951.15,
-      countInStock: 12,
+      countInStock: 0,
       brand: 'Reserva',
       rating: 4.4,
       numReviews: 7,
