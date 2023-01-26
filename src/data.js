@@ -1,7 +1,7 @@
 export const data = {
   products: [
     {
-      _id: '1',
+      // _id: '1',
       name: 'Jaqueta Windbreak Paradise',
       slug: 'jaqueta-windbreak-paradise',
       category: 'Casacos',
@@ -15,7 +15,7 @@ export const data = {
         'A Jaqueta Windbreak Paradise é indicada pra ser usada em dias mais frios.',
     },
     {
-      _id: '2',
+      // _id: '2',
       name: 'Polo Jazz Denim',
       slug: 'polo-jazz-denim',
       category: 'Polos',
@@ -28,7 +28,7 @@ export const data = {
       description: 'Polo Jazz Denim.',
     },
     {
-      _id: '3',
+      // _id: '3',
       name: 'Camisa Linho',
       slug: 'camisa-linho',
       category: 'Camisas',
@@ -42,7 +42,7 @@ export const data = {
         'A Camisa PF MC Linho é indicada para momentos casuais. Possui caimento reto, além de ser feita em 100% algodão.',
     },
     {
-      _id: '4',
+      // _id: '4',
       name: 'Short Casual Arara',
       slug: 'short-casual-arara',
       category: 'Bermudas',
@@ -52,8 +52,7 @@ export const data = {
       brand: 'Reserva',
       rating: 4.8,
       numReviews: 13,
-      description:
-        'O Short Casual Arara é ideal pra ser usado no verão.',
+      description: 'O Short Casual Arara é ideal pra ser usado no verão.',
     },
   ],
 };
