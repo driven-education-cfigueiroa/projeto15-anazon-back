@@ -9,16 +9,17 @@ import userRouter from './routes/userRoutes.js';
 dotenv.config();
 mongoose.set('strictQuery', true);
 
-async function connect() {
+const connectDB = async () => {
   try {
-    await mongoose.connect(
+    const conn = await mongoose.connect(
       process.env.MONGODB_URI || 'mongodb://localhost/amazona'
     );
-    console.log('db connected');
+    console.log(`MongoDB Connected: ${conn.connection.host}`);
   } catch (error) {
     console.log(error);
+    process.exit(1);
   }
-}
+};
 
 const app = express();
 const ip = 'localhost';
@@ -35,8 +36,8 @@ app.use((err, _req, res, _next) => {
   res.status(500).send({ message: err.message });
 });
 
-await connect();
-
-app.listen(port, () => {
-  console.log(`Running at http://${ip}:${port}`);
+connectDB().then(() => {
+  app.listen(port, () => {
+    console.log(`Running at http://${ip}:${port}`);
+  });
 });
